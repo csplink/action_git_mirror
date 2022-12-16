@@ -5,8 +5,8 @@ import urllib
 import urllib.request
 import json
 
-token = os.environ["GITEE_TOKEN"]
-owner = os.environ["GITEE_OWNER"]
+token = os.environ["INPUT_GITEE_TOKEN"]
+owner = os.environ["INPUT_GITEE_OWNER"]
 
 
 def create_repository(repo):
