@@ -13,6 +13,10 @@ inputs:
   dest:
     description: 'dest location, E.g: gitee'
     required: true
+  src_repo:
+    description: 'SSH src repo'
+    required: true
+    default: ${{ github.event.repository.ssh_url }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -20,3 +24,4 @@ runs:
     - ${{ inputs.ssh_private_key }}
     - ${{ inputs.dest_token }}
     - ${{ inputs.dest }}
+    - ${{ inputs.src_repo }}

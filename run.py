@@ -6,7 +6,7 @@ import os
 ssh_private_key = os.environ["INPUT_SSH_PRIVATE_KEY"]
 token = os.environ["INPUT_DEST_TOKEN"]
 dest = os.environ["INPUT_DEST"]
-src_repo = os.environ["GITHUB_EVENT_REPOSITORY_SSH_URL"]
+src_repo = os.environ["INPUT_SRC_REPO"]
 
 dest_repo = src_repo.replace("github", dest)
 
