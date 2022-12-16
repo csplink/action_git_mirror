@@ -11,14 +11,6 @@ src_repo = os.environ["INPUT_SRC_REPO"]
 dest_repo = src_repo.replace("github", dest)
 
 
-def config_ssh():
-    os.system('source ci.sh && config_ssh %s' % ssh_private_key)
-
-
-def mirror():
-    os.system('source ci.sh && mirror %s %s' % src_repo, dest_repo)
-
-
 def main():
     if dest == "gitee":
         source_dir = src_repo.replace("git@github.com:", "").replace(".git", "")
@@ -27,8 +19,7 @@ def main():
     else:
         raise ("dest not support")
 
-    config_ssh()
-    mirror()
+    os.system('ci.sh  %s %s %s' % ssh_private_key, src_repo, dest_repo)
 
 
 if __name__ == "__main__":
