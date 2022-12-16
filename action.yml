@@ -1,0 +1,22 @@
+name: 'Mirror repositoryH'
+description: 'Mirror github to another location, if the repository does not exist, it will be created automatically'
+branding:
+  icon: 'copy'
+  color: 'green'
+inputs:
+  ssh_private_key:
+    description: 'SSH private key'
+    required: true
+  dest_token:
+    description: 'dest location token'
+    required: true  
+  dest:
+    description: 'dest location, E.g: gitee'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ssh_private_key }}
+    - ${{ inputs.dest_token }}
+    - ${{ inputs.dest }}
