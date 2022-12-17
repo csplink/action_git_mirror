@@ -3,7 +3,6 @@
 import gitee
 import os
 
-ssh_private_key = os.environ["INPUT_SSH_PRIVATE_KEY"]
 token = os.environ["INPUT_DEST_TOKEN"]
 dest = os.environ["INPUT_DEST"]
 src_repo = os.environ["INPUT_SRC_REPO"]
@@ -19,7 +18,7 @@ def main():
     else:
         raise ("dest not support")
 
-    os.system(f'sh /ci.sh {ssh_private_key} {src_repo} {dest_repo}')
+    os.system(f'sh /ci.sh {src_repo} {dest_repo}')
 
 
 if __name__ == "__main__":

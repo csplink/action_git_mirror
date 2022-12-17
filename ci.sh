@@ -2,7 +2,7 @@
 
 set -x
 
-ssh_private_key=$1
+ssh_private_key=${INPUT_SSH_PRIVATE_KEY}
 src_repo=$2
 dest_repo=$3
 
