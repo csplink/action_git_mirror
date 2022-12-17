@@ -12,7 +12,7 @@ dest_repo = src_repo.replace("github", dest, 1)
 
 def main():
     if dest == "gitee":
-        source_dir = src_repo.replace("git@github.com:", "").replace(".git", "")
+        source_dir = src_repo.replace("git@github.com:", "").rstrip(".git")
         list = source_dir.split("/")
         gitee.get_or_create_repository(list[0], list[1], token)
     else:
