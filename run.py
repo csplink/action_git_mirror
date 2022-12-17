@@ -18,7 +18,9 @@ def main():
     else:
         raise ("dest not support")
 
-    os.system(f'sh /ci.sh {src_repo} {dest_repo}')
+    status = os.system(f'sh /ci.sh {src_repo} {dest_repo}')
+    if status != 0:
+        raise ("mirror fail")
 
 
 if __name__ == "__main__":
