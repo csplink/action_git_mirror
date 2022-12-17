@@ -7,7 +7,7 @@ token = os.environ["INPUT_DEST_TOKEN"]
 dest = os.environ["INPUT_DEST"]
 src_repo = os.environ["INPUT_SRC_REPO"]
 
-dest_repo = src_repo.replace("github", dest)
+dest_repo = src_repo.replace("github", dest, 1)
 
 
 def main():
