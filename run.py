@@ -19,7 +19,7 @@ def main():
     else:
         raise ("dest not support")
 
-    os.system(f'sh ./ci.sh {ssh_private_key} {src_repo} {dest_repo}')
+    os.system(f'sh /ci.sh {ssh_private_key} {src_repo} {dest_repo}')
 
 
 if __name__ == "__main__":
