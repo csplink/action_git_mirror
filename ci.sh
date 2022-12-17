@@ -3,8 +3,8 @@
 set -x
 
 ssh_private_key=${INPUT_SSH_PRIVATE_KEY}
-src_repo=$2
-dest_repo=$3
+src_repo=$1
+dest_repo=$2
 
 ### config ssh
 mkdir -p /root/.ssh
