@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 ssh_private_key=${INPUT_SSH_PRIVATE_KEY}
 src_repo=$1
 dest_repo=$2
