@@ -2,6 +2,7 @@
 
 import gitee
 import os
+import subprocess
 
 token = os.environ["INPUT_DEST_TOKEN"]
 dest = os.environ["INPUT_DEST"]
@@ -18,9 +19,7 @@ def main():
     else:
         raise ("dest not support")
 
-    status = os.system(f'sh /ci.sh {src_repo} {dest_repo}')
-    if status != 0:
-        raise ("mirror fail")
+    subprocess.run(['/ci.sh', {src_repo}, {dest_repo}], check=True)
 
 
 if __name__ == "__main__":
