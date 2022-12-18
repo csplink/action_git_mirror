@@ -19,7 +19,7 @@ def main():
     else:
         raise ("dest not support")
 
-    subprocess.run(["/ci.sh", src_repo, dest_repo], check=True)
+    subprocess.run(["/ci.sh", src_repo, dest_repo], shell=True, check=True)
 
 
 if __name__ == "__main__":
