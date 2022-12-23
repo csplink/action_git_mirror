@@ -39,14 +39,14 @@
             <img src="https://img.shields.io/badge/video-bilibili-FB7299?style=flat" alt="bilibili" />
         </a>
     </div>
-    <b>CSP: Tools for flexible configuration of chips and boards.</b><br/>
-    <i>Action for Git mirror.</i><br/>
+    <b>CSP：用于灵活配置芯片与板卡的工具</b><br/>
+    <i>用于 Git 镜像的 Action</i><br/>
 </div>
 
-**English** | [中文](README-zh_CN.md)
+[English](README.md) | **中文**
 
-## ✨ Features
+## ✨ 特性
 
-- 🚚 Automatic synchronization of GitHub repository
-- 👷 Automatic creation of Gitee repository
-- 🎹 Support for multiple simultaneous platforms
+- 🚚 自动同步 GitHub 仓库
+- 👷 自动创建 Gitee 仓库
+- 🎹 支持多个同步平台
