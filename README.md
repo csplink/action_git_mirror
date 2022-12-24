@@ -5,10 +5,10 @@
     <h1>Action Git Mirror</h1>
     <div>
         <a href="https://github.com/csplink/action_git_mirror/actions?query=workflow%3A%F0%9F%92%95mirror">
-            <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/mirror.yml?branch=master&style=flat&label=mirror" alt="github-ci" />
+            <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/mirror.yml?style=flat&label=mirror" alt="github-ci" />
         </a>
         <a href="https://github.com/csplink/action_git_mirror/actions?query=workflow%3A%F0%9F%94%96release">
-            <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/release.yml?branch=master&style=flat&label=release" alt="github-ci" />
+            <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/release.yml?style=flat&label=release" alt="github-ci" />
         </a>
     </div>
     <div>
