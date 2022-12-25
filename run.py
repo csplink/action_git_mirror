@@ -13,14 +13,17 @@ dest_repo = src_repo.replace("github", dest, 1)
 
 
 def main():
-    if dest == "gitee":
-        source_dir = src_repo.replace("git@github.com:", "").rstrip(".git")
-        list = source_dir.split("/")
-        gitee.get_or_create_repository(list[0], list[1], token, is_user)
-    else:
-        raise ("dest not support")
-
-    subprocess.run(["/bin/bash", "/ci.sh", src_repo, dest_repo], check=True)
+    try:
+        subprocess.run(["/bin/bash", "/ci.sh", src_repo, dest_repo], check=True)
+        # if fail, create repo and retry
+    except:
+        if dest == "gitee":
+            source_dir = src_repo.replace("git@github.com:", "").rstrip(".git")
+            list = source_dir.split("/")
+            gitee.get_or_create_repository(list[0], list[1], token, is_user)
+        else:
+            raise ("dest not support")
+        subprocess.run(["/bin/bash", "/ci.sh", src_repo, dest_repo], check=True)
 
 
 if __name__ == "__main__":
