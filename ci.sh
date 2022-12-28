@@ -18,6 +18,7 @@ prefix=./.github/mirror/repo
 
 echo "mirror ${src_repo} => ${dest_repo}"
 
+rm -rf ${prefix}/${repo} # cache
 mkdir -p ${prefix}
 git clone --mirror ${src_repo} ${prefix}/${repo} && cd ${prefix}/${repo}
 git remote set-url --push origin "${dest_repo}"
