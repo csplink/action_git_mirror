@@ -10,9 +10,9 @@ src_repo = os.environ["INPUT_SRC_REPO"]
 is_user = os.environ["INPUT_IS_USER"] == str(True)
 
 if os.environ["INPUT_DEST_REPO"].strip() == '':
-    dest_repo = os.environ["INPUT_DEST_REPO"]
-else:
     dest_repo = src_repo.replace("github", dest, 1)
+else:
+    dest_repo = os.environ["INPUT_DEST_REPO"]
 
 
 def main():
