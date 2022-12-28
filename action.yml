@@ -17,6 +17,10 @@ inputs:
     description: 'SSH src repo'
     required: true
     default: ${{ github.event.repository.ssh_url }}
+  dest_repo:
+    description: 'SSH dest repo'
+    required: true
+    default: ""
   is_user:
     description: 'dest owner is user?, E.g: "False", "True"'
     required: true
@@ -29,4 +33,5 @@ runs:
     - ${{ inputs.dest_token }}
     - ${{ inputs.dest }}
     - ${{ inputs.src_repo }}
+    - ${{ inputs.dest_repo }}
     - ${{ inputs.is_user }}
