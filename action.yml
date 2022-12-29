@@ -11,7 +11,7 @@ inputs:
     description: 'dest location token'
     required: true  
   dest:
-    description: 'dest location, E.g: gitee'
+    description: 'dest location, E.g: gitee, coding'
     required: true
   src_repo:
     description: 'SSH src repo'
