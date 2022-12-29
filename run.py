@@ -30,7 +30,7 @@ def main():
             source_dir = dest_repo.replace("git@gitee.com:", "").rstrip(".git")
             list = source_dir.split("/")
             gitee.get_or_create_repository(list[0], list[1], token, is_user)
-        if dest == "coding":
+        elif dest == "coding":
             source_dir = dest_repo.replace("git@e.coding.net:", "").rstrip(".git")
             list = source_dir.split("/")
             coding.get_or_create_repository(list[0], list[1], list[2], token)
