@@ -22,3 +22,11 @@ jobs:
           dest_token: ${{ secrets.CODING_TOKEN }}
           dest_repo: git@e.coding.net:csplink/csplink/action_git_mirror.git
           dest: coding
+
+      - name: 💕 mirror to gitlab
+        uses: csplink/action_git_mirror/@master
+        with:
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          dest_token: ${{ secrets.GITLAB_TOKEN }}
+          dest_repo: git@gitlab.com:csplink/action_git_mirror.git
+          dest: gitlab
