@@ -62,7 +62,7 @@ def main():
         elif dest == "gitlab":
             host = "https://" + re.search(r"(?<=git@).*?(?=:)", dest_repo).group()
             owner = re.search(r"(?<=:).*?(?=[^/]+$)", dest_repo).group().strip("/")
-            repo = re.search(r"(?=[^/]+(?!.*/)).*?(?=.git)", dest_repo).group()
+            repo = re.search(r"(?=[^/]+(?!.*/)).*?(?=\.git)", dest_repo).group()
             gitlab_action.get_or_create_repository(host, owner, repo, token, is_user)
         else:
             raise ("dest not support")
