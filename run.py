@@ -26,7 +26,8 @@
 
 import coding
 import gitee
-import os
+import gitlab_action
+import os, re
 import subprocess
 
 token = os.environ["INPUT_DEST_TOKEN"]
@@ -37,7 +38,7 @@ is_user = os.environ["INPUT_IS_USER"] == str(True)
 if os.environ["INPUT_DEST_REPO"].strip() == '':
     if dest == "gitee":
         dest_repo = src_repo.replace("git@github.com:", "git@gitee.com:", 1)
-    elif dest == "coding":
+    elif dest == "coding" or dest == "gitlab":
         raise ("coding not support empty dest_repo, please set dest_repo")
 else:
     dest_repo = os.environ["INPUT_DEST_REPO"]
@@ -58,6 +59,11 @@ def main():
             source_dir = dest_repo.replace("git@e.coding.net:", "").rstrip(".git")
             list = source_dir.split("/")
             coding.get_or_create_repository(list[0], list[1], list[2], token)
+        elif dest == "gitlab":
+            host = "https://" + re.search(r"(?<=git@).*?(?=:)", dest_repo).group()
+            owner = re.search(r"(?<=:).*?(?=[^/]+$)", dest_repo).group().strip("/")
+            repo = re.search(r"(?=[^/]+(?!.*/)).*?(?=.git)", dest_repo).group()
+            gitlab_action.get_or_create_repository(host, owner, repo, token, is_user)
         else:
             raise ("dest not support")
         print("*******************************************************************************************************")
