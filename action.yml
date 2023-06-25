@@ -1,4 +1,4 @@
-name: 'Mirror repositoryH'
+name: 'Mirror repository'
 description: 'Mirror github to another location, if the repository does not exist, it will be created automatically'
 branding:
   icon: 'copy'
