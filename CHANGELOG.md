@@ -15,3 +15,11 @@
 ## v1.0.0
 
 none
+
+## v1.0.1
+
+- Only supports simple mirroring and no longer calls APIs of other platforms to create repositories.
+
+---
+
+- 只支持单纯的镜像，不再调用其他平台的 api 去创建仓库

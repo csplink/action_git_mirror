@@ -7,31 +7,13 @@ inputs:
   ssh_private_key:
     description: 'SSH private key'
     required: true
-  dest_token:
-    description: 'dest location token'
-    required: true  
-  dest:
-    description: 'dest location, E.g: gitee, coding'
-    required: true
-  src_repo:
-    description: 'SSH src repo'
+  repo:
+    description: 'SSH repo url'
     required: true
     default: ${{ github.event.repository.ssh_url }}
-  dest_repo:
-    description: 'SSH dest repo'
-    required: true
-    default: ""
-  is_user:
-    description: 'dest owner is user?, E.g: "False", "True"'
-    required: true
-    default: "False"
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.ssh_private_key }}
-    - ${{ inputs.dest_token }}
-    - ${{ inputs.dest }}
-    - ${{ inputs.src_repo }}
-    - ${{ inputs.dest_repo }}
-    - ${{ inputs.is_user }}
+    - ${{ inputs.repo }}
