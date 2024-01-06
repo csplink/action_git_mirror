@@ -17,7 +17,7 @@
 # Copyright (C) 2023-2023 xqyjlj<xqyjlj@126.com>
 #
 # @author      xqyjlj
-# @file        mirror.sh
+# @file        run.py
 #
 # Change Logs:
 # Date           Author       Notes
