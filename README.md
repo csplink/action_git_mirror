@@ -1,14 +1,11 @@
 <div align="center">
     <a href="https://csplink.top">
-        <img width="160" heigth="160" src="https://raw.githubusercontent.com/csplink/csp/master/Apps/CSP.Apps.Dev/Resources/Images/logo.svg" alt="logo" />
+        <img width="160" heigth="160" src="https://raw.githubusercontent.com/csplink/csp/master/apps/dev/resources/images/logo.svg" alt="logo" />
     </a>
     <h1>Action Git Mirror</h1>
     <div>
         <a href="https://github.com/csplink/action_git_mirror/actions?query=workflow%3A%F0%9F%92%95mirror">
             <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/mirror.yml?style=flat&label=mirror" alt="github-ci" />
-        </a>
-        <a href="https://github.com/csplink/action_git_mirror/actions?query=workflow%3A%F0%9F%94%96release">
-            <img src="https://img.shields.io/github/actions/workflow/status/csplink/action_git_mirror/release.yml?style=flat&label=release" alt="github-ci" />
         </a>
     </div>
     <div>
@@ -48,5 +45,4 @@
 ## ✨ Features
 
 - 🚚 Automatic synchronization of GitHub repository
-- 👷 Automatic creation of Gitee repository
 - 🎹 Support for multiple simultaneous platforms
