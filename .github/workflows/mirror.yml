@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 💕 mirror
-        uses: csplink/action_git_mirror/@dev
+        uses: csplink/action_git_mirror/@master
         with:
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
