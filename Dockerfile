@@ -22,7 +22,7 @@
 # 2023-01-07     xqyjlj       initial version
 #
 
-FROM csplink/ubuntu_ci:22.04
+FROM ubuntu:22.04
 
 RUN apt-get update
 RUN apt-get install -y git openssh-client
