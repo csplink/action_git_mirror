@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://csplink.top">
-        <img width="160" heigth="160" src="https://raw.githubusercontent.com/csplink/csp/master/apps/dev/resources/images/logo.svg" alt="logo" />
+        <img width="160" heigth="160" src="https://raw.githubusercontent.com/csplink/csp/master/resource/images/logo.png" alt="logo" />
     </a>
     <h1>Action Git Mirror</h1>
     <div>
