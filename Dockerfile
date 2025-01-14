@@ -25,7 +25,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update
-RUN apt-get install -y git openssh-client
+RUN apt-get install -y git openssh-client python3 python3-pip
 
 ADD *.py /
 ADD *.sh /
