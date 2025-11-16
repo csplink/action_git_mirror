@@ -37,10 +37,8 @@ def main():
     if match:
         name = match.group(1)
         gitee_repo = f"git@gitee.com:csplink/{name}.git"
-        coding_repo = f"git@e.coding.net:csplink/csplink/{name}.git"
         gitlab_repo = f"git@gitlab.com:csplink/{name}.git"
         subprocess.run(["/bin/bash", "/mirror.sh", repo, gitee_repo], check=True)
-        subprocess.run(["/bin/bash", "/mirror.sh", repo, coding_repo], check=True)
         subprocess.run(["/bin/bash", "/mirror.sh", repo, gitlab_repo], check=True)
 
 
